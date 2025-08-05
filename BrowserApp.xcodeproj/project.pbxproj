@@ -6,6 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A9DE69FA2E41E082005EF4E0 /* WebBundle */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A9DE69FB2E41E082005EF4E0 /* Build configuration list for PBXAggregateTarget "WebBundle" */;
+			buildPhases = (
+				A9DE69FE2E41E088005EF4E0 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = WebBundle;
+			packageProductDependencies = (
+			);
+			productName = WebBundle;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		A9DE69FF2E41E135005EF4E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9DE69E42E41E075005EF4E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9DE69FA2E41E082005EF4E0;
+			remoteInfo = WebBundle;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A9DE69EC2E41E075005EF4E0 /* BrowserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -59,6 +85,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A9DE6A002E41E135005EF4E0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A9DE69EE2E41E075005EF4E0 /* BrowserApp */,
@@ -83,6 +110,9 @@
 					A9DE69EB2E41E075005EF4E0 = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					A9DE69FA2E41E082005EF4E0 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = A9DE69E72E41E075005EF4E0 /* Build configuration list for PBXProject "BrowserApp" */;
@@ -100,6 +130,7 @@
 			projectRoot = "";
 			targets = (
 				A9DE69EB2E41E075005EF4E0 /* BrowserApp */,
+				A9DE69FA2E41E082005EF4E0 /* WebBundle */,
 			);
 		};
 /* End PBXProject section */
@@ -114,6 +145,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A9DE69FE2E41E088005EF4E0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${SCRIPT_OUTPUT_FILE_0}/build/\"\n\n# Create a minimal index.html file\ncat > \"${SCRIPT_OUTPUT_FILE_0}/build/index.html\" << 'EOF'\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Simple Page</title>\n</head>\n<body>\n</body>\n</html>\nEOF\n\ncat > \"${SCRIPT_OUTPUT_FILE_0}/build/page.html\" << 'EOF'\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Simple Page</title>\n</head>\n<body>\n</body>\n</html>\nEOF\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9DE69E82E41E075005EF4E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -123,6 +175,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9DE6A002E41E135005EF4E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9DE69FA2E41E082005EF4E0 /* WebBundle */;
+			targetProxy = A9DE69FF2E41E135005EF4E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A9DE69F52E41E078005EF4E0 /* Debug */ = {
@@ -302,6 +362,26 @@
 			};
 			name = Release;
 		};
+		A9DE69FC2E41E082005EF4E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 922QE82JGA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9DE69FD2E41E082005EF4E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 922QE82JGA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +399,15 @@
 			buildConfigurations = (
 				A9DE69F82E41E078005EF4E0 /* Debug */,
 				A9DE69F92E41E078005EF4E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9DE69FB2E41E082005EF4E0 /* Build configuration list for PBXAggregateTarget "WebBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9DE69FC2E41E082005EF4E0 /* Debug */,
+				A9DE69FD2E41E082005EF4E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
