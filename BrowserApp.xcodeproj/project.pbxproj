@@ -22,6 +22,10 @@
 		};
 /* End PBXAggregateTarget section */
 
+/* Begin PBXBuildFile section */
+		96516AC32BF928DD00576562 /* build in Resources */ = {isa = PBXBuildFile; fileRef = A9DE6A502E41E397005EF4E0 /* build */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A9DE69FF2E41E135005EF4E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		A9DE69EC2E41E075005EF4E0 /* BrowserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DE6A502E41E397005EF4E0 /* build */ = {isa = PBXFileReference; lastKnownFileType = text; path = "build/build/"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -60,6 +65,7 @@
 			children = (
 				A9DE69EE2E41E075005EF4E0 /* BrowserApp */,
 				A9DE69ED2E41E075005EF4E0 /* Products */,
+				A9DE6A502E41E397005EF4E0 /* build */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96516AC32BF928DD00576562 /* build in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +165,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/",
+				"$(BUILT_PRODUCTS_DIR)/build/",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
