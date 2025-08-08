@@ -27,6 +27,16 @@
 		A915C4472E45B8A100347267 /* touch.txt in Resources */ = {isa = PBXBuildFile; fileRef = A915C4462E45B8A100347267 /* touch.txt */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A915C44A2E45BAFD00347267 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9DE69E42E41E075005EF4E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9DE69FA2E41E082005EF4E0;
+			remoteInfo = WebBundle;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A915C4462E45B8A100347267 /* touch.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = touch.txt; sourceTree = "<group>"; };
 		A9DE69EC2E41E075005EF4E0 /* BrowserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,13 +88,13 @@
 			buildConfigurationList = A9DE69F72E41E078005EF4E0 /* Build configuration list for PBXNativeTarget "BrowserApp" */;
 			buildPhases = (
 				A9DE69E82E41E075005EF4E0 /* Sources */,
-				A915C4412E45B6C300347267 /* Run Script */,
 				A9DE69E92E41E075005EF4E0 /* Frameworks */,
 				A9DE69EA2E41E075005EF4E0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A915C44B2E45BAFD00347267 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A9DE69EE2E41E075005EF4E0 /* BrowserApp */,
@@ -147,26 +157,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A915C4412E45B6C300347267 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/touch.txt",
-			);
-			name = "Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/build/",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${SCRIPT_OUTPUT_FILE_0}/build/\"\n\necho \"Pausing for 10 seconds before creating files...\"\nsleep 10\n\ncat \"${SCRIPT_INPUT_FILE_0}\"\n\ncat > \"${SCRIPT_OUTPUT_FILE_0}/build/index.html\" << EOF\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Simple Page</title>\n</head>\n<body>\n    <h1>Welcome to Simple Page</h1>\n    <p>Generated at: $(date)</p>\n</body>\n</html>\nEOF\n\ncat > \"${SCRIPT_OUTPUT_FILE_0}/build/page.html\" << 'EOF'\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Simple Page</title>\n</head>\n<body>\n</body>\n</html>\nEOF\n";
-		};
 		A9DE69FE2E41E088005EF4E0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +187,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A915C44B2E45BAFD00347267 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9DE69FA2E41E082005EF4E0 /* WebBundle */;
+			targetProxy = A915C44A2E45BAFD00347267 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A9DE69F52E41E078005EF4E0 /* Debug */ = {
